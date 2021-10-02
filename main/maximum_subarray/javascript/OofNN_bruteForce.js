@@ -5,8 +5,7 @@ var maxSubArray = function(nums) {
         currentSum = nums[i]
         for(let j = i+1; j<nums.length-1; j++){
             currentSum += nums[j];
-            if(currentSum > maxSum)maxSum = currentSum
-       
+            if(currentSum > maxSum)maxSum = currentSum     
         }
     }
      return maxSum;
