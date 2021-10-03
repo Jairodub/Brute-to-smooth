@@ -1,6 +1,6 @@
 var maxSubArray = function(nums) {
     let maxSum, currentSum, localMax;
-    for(let i = 0; i < nums.length-1 ; i++){
+    for(let i = 0; i < nums.length ; i++){
         if(i == 0) maxSum = localMax = nums[i];
       	localMax = max(nums[i], nums[i]+localMax);
     	maxSum=max(maxSum , localMax);
