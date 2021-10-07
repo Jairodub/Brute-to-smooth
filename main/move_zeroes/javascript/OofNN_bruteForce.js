@@ -8,8 +8,7 @@ var moveZeroes = function(nums){
                 nums[i] = nums[j];
                 nums[j]=0;
                 break;
-                }
-          
+                }    
              }
           }
         }
