@@ -1,2 +1,2 @@
 # Brute-to-smooth
-Exploring solutions to common and unique coding challanges starting with the brute -force option and progressing to more efficient ones
+Exploring solutions to common and unique coding challenges starting with the brute -force option then progressing to more efficient ones
