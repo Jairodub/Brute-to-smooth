@@ -8,6 +8,6 @@ var moveZeroes = function(nums){
               lastZeroIndex += 1;
               nums[i] = 0;
             }
-          }
+         }
     }
 }
