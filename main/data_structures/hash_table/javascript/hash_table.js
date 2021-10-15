@@ -2,6 +2,7 @@ class HashTable{
     constructor(size){
         this.data = new Array (size);
     }
+    //Hash function
     _hash(key) {
         let hash = 0;
         for (let i =0; i < key.length; i++){
