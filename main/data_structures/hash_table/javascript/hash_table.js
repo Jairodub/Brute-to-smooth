@@ -2,6 +2,7 @@ class HashTable{
     constructor(size){
         this.data = new Array (size);
     }
+    
     //Hash function
     _hash(key) {
         let hash = 0;
@@ -10,6 +11,7 @@ class HashTable{
         }
         return hash;
       }
+    
       set(key, value){
          let location=_hash(key);
          this.data[location]=value;
