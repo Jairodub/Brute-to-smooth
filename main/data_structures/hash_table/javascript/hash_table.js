@@ -19,9 +19,9 @@ class HashTable{
       }
 }
 
-//Test Case
+//Test Cases
 const myHashTable = new HashTable(50);
 myHashTable.set('grapes', 10000);
 console.log(myHashTable.get('grapes')); //Expected output 10000
-myHashTable.set('apples', 9)
+myHashTable.set('apples', 9);
 console.log(myHashTable.get('apples')); //Expected output 9
