@@ -64,7 +64,7 @@ class HashTable{
     delete(key){
         let location = this._hash(key);
         if(this.data[location] === undefined){
-            throw "Item does not exist";
+            return;
         }else if (this.data[location].length ===1){
             this.data[location].pop();
             this.items=this. _deleteItem(key, this.items)
