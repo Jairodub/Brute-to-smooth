@@ -2,14 +2,15 @@
 ***The two sum problem***<br>
 *Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 You may assume that each input would have exactly one solution, and you may not use the same element twice.*
-**Solution**
+
+**Solution**<br>
 ```
-var containsDuplicate = function(nums) {
-	for(let i = 0; i < nums.length; i++){
-    if (nums.includes(nums[i], i+1)) return true;
+var twoSum = function(nums, target){
+	for (let i =0; i<nums.length; i++){
+      complimentIndex = nums.indexOf(target-nums[i]);
+      if (i != complimentIndex && complimentIndex!= -1) return [i, complimentIndex]
     }
-  	return false;
-};
+}
 ```
 
 **The approach**<br>
