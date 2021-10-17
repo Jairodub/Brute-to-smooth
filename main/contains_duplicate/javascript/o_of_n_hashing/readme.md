@@ -2,15 +2,14 @@
 ***The contains duplicate problem***<br>
 *Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.*
 
+**Solution**
 ```
-
 var containsDuplicate = function(nums) {
 	for(let i = 0; i < nums.length; i++){
     if (nums.includes(nums[i], i+1)) return true;
     }
   	return false;
 };
-
 ```
 
 
