@@ -22,12 +22,12 @@ class HashTable{
     }
     set(key, value){
          let location =this._hash(key);
-         if(this.data[location]===undefined){   //When there are no collusions yet
+         if(this.data[location] === undefined){   //When there are no collusions yet
             this.data[location].push([key, value]);
             this.items.push([key,value]);
         }else{
             for(let i=0; i<this.data[location].length; i++){
-                if (key===this.data[location][i][0]){   //When key is a duplicate and has a collusion
+                if (key === this.data[location][i][0]){   //When key is a duplicate and has a collusion
                     this.data[location][i]=[key,value];
                     this.items.push([key,value]);
                     return;
@@ -42,11 +42,11 @@ class HashTable{
           let location = this._hash(key);
         if(this.data[location] === undefined){  //When key does not exist
             return undefined;
-        }else if (this.data[location].length ===1){ //When key exists with no collusions
+        }else if (this.data[location].length === 1){ //When key exists with no collusions
             return this.data[location][0][1];
         }else{
             for(let i=0; i<this.data[location].length; i++){ //When key exists but has collusions
-                if (key===this.data[location][i][0]){
+                if (key === this.data[location][i][0]){
                 return this.data[location][i][1];
                 }
             } 
@@ -67,12 +67,12 @@ class HashTable{
             return;
         }else if (this.data[location].length ===1){
             this.data[location].pop();
-            this.items=this. _deleteItem(key, this.items)
+            this.items = this. _deleteItem(key, this.items);
         }else{
            for(let i=0; i<this.data[location].length; i++){
-                if (key===this.data[location][i][0]){
+                if (key === this.data[location][i][0]){
                    this.data[location]=this._deleteItem(key, this.data[location]);
-                   this. _deleteItem(key, this.items);
+                   this.items = this. _deleteItem(key, this.items);
                 }
             } 
         }
