@@ -9,4 +9,4 @@ to search for the complement of each value in the array is an O(N)-time-complexi
 the given array into a hash table will require at least a loop *(O(N) time)*, we can use a hash table to solve the problem with a O(N)-time-complexity solution 
 `(O(N) + O(N))`. 
 
-The downside to this solution is that it uses up extra space for the new hash table resulting in a less efficient space complexity (O(N)).
+The downside to this solution is that it uses up extra space for the new hash table resulting in less efficient space complexity (O(N)).
