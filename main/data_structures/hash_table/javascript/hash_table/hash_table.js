@@ -52,15 +52,6 @@ class HashTable{
             } 
         }         
     }
-    keys(){
-        return this.items.map(item=> item[0]);
-    }
-    values(){
-        return this.items.map(item=> item[1]);
-    }
-    allItems(){
-        return this.items;
-    }
     delete(key){
         let location = this._hash(key);
         if(this.data[location] === undefined){
@@ -77,4 +68,14 @@ class HashTable{
             } 
         }
     }
+    keys(){
+        return this.items.map(item=> item[0]);
+    }
+    values(){
+        return this.items.map(item=> item[1]);
+    }
+    allItems(){
+        return this.items;
+    }
+
 }
