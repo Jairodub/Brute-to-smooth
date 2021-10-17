@@ -14,7 +14,6 @@ class HashTable{
          let location =this._hash(key);
          if(this.data[location]===undefined){   //When there are no collusions yet
             this.data[location].push([key, value]);
-           	console.log(this.data[location][0]);
          }else{
             for(let i=0; i<this.data[location].length; i++){
                 if (key===this.data[location][i][0]){   //When key is a duplicate and has a collusion
