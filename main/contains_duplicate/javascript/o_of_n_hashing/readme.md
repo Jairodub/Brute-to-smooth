@@ -1,7 +1,6 @@
 # The hashing solution to the contains duplicate problem in JavaScript
 ***The contains duplicate problem***<br>
-*Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
-You may assume that each input would have exactly one solution, and you may not use the same element twice.*
+*Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.*
 
 **The approach**<br>
 Arrays in JavaScript are implemented as hash tables with their indices as keys. Using the inbuilt methods provided in JavaScript
