@@ -18,7 +18,7 @@ var twoSum = function(nums, target){
 ```
 
 **The approach**<br>
-Using the inbuilt hash table JavaScript type Map, we can convert the array into a hash table with its values as keys and indices as values. This is a single O(N) loop.
+Using the inbuilt hash table JavaScript type Map, we can convert the array into a hash table with the array's values as keys and its indices as values. This is a single O(N) loop.
 We can then efficiently  search for the complement of each item (`comp = target-item`) with another O(N)-time-complexity loop `(O(N)*O(1)`. We end up arriving at the solution within a O(N)-time complexity `(O(N) + O(N))`. 
 
 The downside to this solution is that it uses up extra space for the new hash table resulting in less efficient space complexity (O(N)).
