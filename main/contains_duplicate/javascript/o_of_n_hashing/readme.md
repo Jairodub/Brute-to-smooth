@@ -13,12 +13,8 @@ var containsDuplicate = function(nums, target){
     return false;
 };
 ```
-
-
 **The approach**<br>
-Arrays in JavaScript are implemented as hash tables with their indices as keys. Using the inbuilt methods provided in JavaScript
-to search for the duplicate of each value in the given array is an O(N)-time-complexity operation `(O(N)*O(1)`. Given that converting
-the given array into a hash table will require at least a loop *(O(N) time)*, we can use a hash table to solve the problem with a O(N)-time-complexity solution 
-`(O(N) + O(N))`. 
+Using the inbuilt hash table JavaScript type Map, we can convert the array into a hash table with the array's values as keys and its indices as values. Before each value is added, we first search the hash table to determine if the value already exists and return true if it does. This is a single O(N) time complexity loop (O(N)*O(1).
 
 The downside to this solution is that it uses up extra space for the new hash table resulting in less efficient space complexity (O(N)).
+
