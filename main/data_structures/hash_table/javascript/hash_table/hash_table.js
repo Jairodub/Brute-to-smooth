@@ -10,7 +10,7 @@ class HashTable{
             hash = (hash + key.charCodeAt(i) * i) % this.data.length;
         }
         return hash;
-      }
+    }
     _deleteItem(key, arr){
         let newArray = [];
         for(let i=0; i<arr.length; i++){
@@ -37,7 +37,7 @@ class HashTable{
             this.items.push([key,value]);
         }
          
-     }
+    }
     get(key){
           let location = this._hash(key);
         if(this.data[location] === undefined){  //When key does not exist
