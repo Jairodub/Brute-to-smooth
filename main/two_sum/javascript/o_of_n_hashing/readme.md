@@ -6,17 +6,19 @@ You may assume that each input would have exactly one solution, and you may not 
 **Solution**<br>
 ```
 var twoSum = function(nums, target){
-	for (let i =0; i<nums.length; i++){
-      		complimentIndex = nums.indexOf(target-nums[i]);
-      		if (i != complimentIndex && complimentIndex!= -1) return [i, complimentIndex];
-    	}
+    let myMap = new Map();
+    for(let i =0; i<nums.length; i++){
+        myMap.set(nums[i],i);
+    }
+    for (let i =0; i<nums.length; i++){
+        complimentIndex = myMap.get(target-nums[i])
+        if (complimentIndex != undefined&& i != complimentIndex) return [i, complimentIndex];
+    }
 }
 ```
 
 **The approach**<br>
-Arrays in JavaScript are implemented as hash tables with their indices as keys. Using the inbuilt methods provided in JavaScript
-to search for the complement of each item (`comp = target-item`) is an O(N)-time-complexity operation `(O(N)*O(1)`. Given that converting
-the given array into a hash table will require at least a loop *(O(N) time)*, we can use a hash table to solve the problem with a O(N)-time-complexity solution 
-`(O(N) + O(N))`. 
+Using the inbuilt hash table JavaScript type Map, we can convert the array into a hash table with its values as keys and indices as values. This is a single O(N) loop.
+We can then efficiently  search for the complement of each item (`comp = target-item`) with another O(N)-time-complexity loop `(O(N)*O(1)`. We end up arriving at the solution within a O(N)-time complexity `(O(N) + O(N))`. 
 
 The downside to this solution is that it uses up extra space for the new hash table resulting in less efficient space complexity (O(N)).
