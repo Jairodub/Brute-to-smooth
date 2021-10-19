@@ -14,7 +14,7 @@ var containsDuplicate = function(nums, target){
 };
 ```
 **The approach**<br>
-Using the inbuilt hash table JavaScript type Map, we can convert the array into a hash table with the array's values as keys and its indices as values. Before each value is added, we first search the hash table to determine if the value already exists and return true if it does. This is a single O(N) time complexity loop (O(N)*O(1).
+Using the inbuilt hash table JavaScript type Map, we can convert the array into a hash table with the array's values as keys and its indices as values. Before each value is added, we first search the hash table to determine if the value already exists and return true if it does. We otherwise return false after the loop. This is a single O(N) time complexity loop (O(N)*O(1).
 
 The downside to this solution is that it uses up extra space for the new hash table resulting in less efficient space complexity (O(N)).
 
