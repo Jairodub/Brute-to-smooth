@@ -50,35 +50,31 @@ class LinkedList {
         }
     }
     delete(index){
-        let indexBefore= index-1;
         let currentNode=this.head;
         let newNode={
             value:null,
             next:null
         };
         let currentIndex=0
-        if(index===0){
+        if(this.length===0){
+          	return null;
+        }else if(index===0){
             this.head=this.head.next;
             this.length--;
             return;
-        }
+     	}
 
         while(currentNode!=null){
-            if(currentIndex===indexBefore){
+            if(currentIndex===index-1){
               	if(index===this.length-1){
                       newNode=null;
-                }else if( index===this.length-2){
-                    newNode.value=currentNode.next.next.value;
-                    newNode.next=null
                 }else{
-                    newNode.value=currentNode.next.next.value;
-              	    newNode.next= currentNode.next.next.next;
+                    newNode=currentNode.next.next;    
                 }
                 currentNode.next=newNode;
                 this.length--;
                 return;
             }
-      
         currentNode=currentNode.next;
         currentIndex++;
         }
