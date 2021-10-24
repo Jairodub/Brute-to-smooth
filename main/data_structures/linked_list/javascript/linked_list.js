@@ -33,7 +33,11 @@ class LinkedList {
             next:null
         };
         let currentIndex=0
-
+        
+        if(index===0){
+        	this.prepend(value);
+          	return;
+        }
         while(currentNode!=null){
             if(currentIndex===indexBefore){
                 newNode.next=currentNode.next;
