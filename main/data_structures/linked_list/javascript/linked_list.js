@@ -51,10 +51,6 @@ class LinkedList {
     }
     delete(index){
         let currentNode=this.head;
-        let newNode={
-            value:null,
-            next:null
-        };
         let currentIndex=0
         if(this.length===0){
           	return null;
