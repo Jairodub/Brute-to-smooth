@@ -15,8 +15,8 @@ function split(arr){
 }
 function merge(arr1,arr2){
   let mergedArr=[];
-  let totalLen=arr1.length+arr2.length;
- while(mergedArr.length<totalLen){
+  let totalLength=arr1.length+arr2.length;
+ while(mergedArr.length<totalLenth){
    if(arr1.length==0){
      mergedArr.push(arr2.splice(0,1)[0]);
     }else  if(arr2.length==0){
